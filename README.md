@@ -1,2 +1,2 @@
 # Syrah manuscript
-Code to generate figures for Syrah manuscript
+Analysis code for Syrah manuscript
