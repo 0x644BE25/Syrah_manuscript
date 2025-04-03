@@ -54,4 +54,4 @@ to both display *and* save the terminal output.
 
 ## Generating Plots
 
-Ensure that all of your counts files are in a directory together named `data` and that their names match those of [the counts files in this repo](https://github.com/0x644BE25/Syrah_manuscript/tree/main/data). Don't worry about filtering to a minimum of 10 UMIs -- the script `generate_plots_and_xlsx.R` will handle that for you. Simply open that script, modify the `setwd()` command as needed, and run.
+Ensure that all of your counts files are in a directory together named `data` and that their names match those of [the counts files in this repo](https://github.com/0x644BE25/Syrah_manuscript/tree/main/data). Don't worry about filtering to a minimum of 10 UMIs -- [the script `generate_plots_and_xlsx.R`](https://github.com/0x644BE25/Syrah_manuscript/blob/main/generate_plots_and_xlsx.R) will handle that for you. Simply open your copy of the script, modify the `setwd()` command as needed, and run.
