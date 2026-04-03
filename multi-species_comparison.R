@@ -19,7 +19,7 @@ source('helper_functions.R')
 
 # ================= PARAMS ===========================
 
-datasets <- c('mouse','planarian','chick','human')[1:3]
+datasets <- c('mouse','planarian','chick','human')
 versions <- c('original','syrah')
 nPCs <- c('mouse'=5,'planarian'=15,'chick'=15,'human'=10)
 
@@ -36,7 +36,6 @@ set.seed(61687)
 summary <- NULL
 
 for (ds in datasets) {
-  cat(ds,'\n')
   coords <- read.delim(paste0(ds,'_coordinates.tsv'),header=FALSE,row.names=1)
   
   for (vs in versions) {
