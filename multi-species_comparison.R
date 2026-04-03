@@ -37,7 +37,11 @@ for (ds in datasets) {
   pcs_df <- NULL
   
   for (vs in versions) {
-    counts <- getCountsFromNpz(paste0(ds,'_',vs,'_sparse_counts.npz'))
+    if (ds=='planarian') { 
+      counts <- getCountsFromNpz(paste0(ds,'_1run_',vs,'_sparse_counts.npz'))
+    } else {
+      counts <- getCountsFromNpz(paste0(ds,'_',vs,'_sparse_counts.npz'))
+    }
     counts <- counts[,colnames(counts) %in% rownames(coords)]
     counts <- counts[,colSums(counts)>=minUMI]
     
@@ -60,4 +64,4 @@ for (ds in datasets) {
     pcs_df <- rbind(pcs_df,data.frame(version=vs,PC=1:nPCs[ds],stdev=seu[['pca']]@stdev))
   }
   write.csv(pcs_df,paste0(ds,'_PC_stdevs.csv'))
-} 
+}
