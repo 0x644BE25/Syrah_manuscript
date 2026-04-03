@@ -1,1 +1,6 @@
-
+{
+"SlideSeq.UMIsMetrics.disk":"${200}",
+"SlideSeq.UMIsMetrics.machine_mem_mb":"${32000}",
+"SlideSeq.count_exons":"${false}",
+"SlideSeq.read_structure":"8C18X6C9M1X",
+}
