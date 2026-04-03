@@ -60,4 +60,4 @@ for (ds in datasets) {
     pcs_df <- rbind(pcs_df,data.frame(version=vs,PC=1:nPCs[ds],stdev=seu[['pca']]@stdev))
   }
   write.csv(pcs_df,paste0(ds,'_PC_stdevs.csv'))
-}
+} 
