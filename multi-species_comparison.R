@@ -10,10 +10,10 @@
 # https://github.com/0x644BE25/Syrah_manuscript
 ######################################################
 
+# ================= IMPORTS ==========================
+
 if (!require('Seurat')) { install.packages('Seurat') }
 if (!require('ggplot2')) { install.packages('ggplot2') }
-
-# ================= IMPORTS ==========================
 
 source(helper_functions.R)
 
@@ -25,16 +25,17 @@ nPCs <- c('mouse'=5,'planarian'=15,'chick'=15,'human'=10)
 
 minUMI <- 50
 
-nUMIs <- c()
-
 ms_colors <- c('mouse'='#6620bb','planarian'='#496efd','chick'='#bb59bf','human'='#ff585f')
 ms_colors_lt <- c('mouse'='#b390dd','planarian'='#a4b7fe','chick'='#ddacdf','human'='#ffacaf')
 
 set.seed(61687)
 
+# ================= ANALYSIS =========================
+
 for (ds in datasets) {
   coords <- read.delim(paste0(ds,'_coordinates.tsv'),header=FALSE,row.names=1)
-  pcs_df <- NULL()
+  pcs_df <- NULL
+  
   for (vs in versions) {
     counts <- getCountsFromNpz(paste0(ds,'_',vs,'_sparse_counts.npz'))
     counts <- counts[,colnames(counts) %in% rownames(coords)]
@@ -53,7 +54,7 @@ for (ds in datasets) {
     seu[['puck']] <- CreateDimReducObject(embeddings=puck,key='PUCK_',assay='RNA')
     
     # save Seurat object
-    saveRDS(paste0(ds,'_',vs,'_seurObj.rds'))
+    saveRDS(seu,paste0(ds,'_',vs,'_seurObj.rds'),compress=FALSE)
     
     # collate PC info
     pcs_df <- rbind(pcs_df,data.frame(version=vs,PC=1:nPCs[ds],stdev=seu[['pca']]@stdev))
