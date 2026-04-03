@@ -1,7 +1,7 @@
 ######################################################
 # MULTI-SPECIES COMPARISON
 #
-# GOAL: This assumes that you have downloaded and
+# This assumes that you have downloaded and
 # unpacked the WARP_output human, mouse, chick, and
 # planarian data files into your working folder as 
 # well as the helper_functions.R script. 
