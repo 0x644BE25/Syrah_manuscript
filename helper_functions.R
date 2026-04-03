@@ -2,6 +2,9 @@
 # HELPER FUNCTIONS
 ######################################################
 
+sem <- function(x){ return(sd(x)/sqrt(length(x))) }
+min_p <- function(x){ return(pmax(x,.Machine$double.xmin)) }
+pct_change <- function(a,b) { return(((a/b)-1)*100) }
 
 if (!require('callr')) install.packages('callr')
 if (!require('reticulate')) install.packages('reticulate')
