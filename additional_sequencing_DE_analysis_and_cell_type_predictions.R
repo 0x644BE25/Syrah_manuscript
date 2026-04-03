@@ -14,6 +14,10 @@
 # metadata-ed, aligned to schMedS3, and SCTransformed.
 # This file is way too big for GitHub, but easily
 # available by request to cbrewster@stowers.org
+#
+# If you don't have that data, it will use the 
+# precomputed labeltransfer results included in
+# the WARP_output planarian.tar.gz data.
 ######################################################
 
 # ================= IMPORTS ==========================
