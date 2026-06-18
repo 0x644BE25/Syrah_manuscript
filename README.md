@@ -1,4 +1,4 @@
-# *Syrah: a pipeline to maximize spatial transcriptomics data output *
+# Syrah: a pipeline to maximize spatial transcriptomics data output
 
 Additional data and code for the analysis (including _in silico_ experiments) presented in _[Syrah: a pipeline to maximize spatial transcriptomics data output](http://academic.oup.com/g3journal/advance-article/doi/10.1093/g3journal/jkag107/8667091)_ (Brewster et al., 2026)
 
